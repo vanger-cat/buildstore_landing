@@ -7,4 +7,10 @@ document.querySelectorAll('.gallery').forEach(gallery => {
     evt.preventDefault();
     gallery.scrollLeft += evt.deltaY;
   });
-}); 
+});
+
+// Автоматическая подстановка текущего года в футер
+const yearSpan = document.getElementById('year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+} 
