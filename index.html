@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BuildStore</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,15 +34,31 @@
 
     <section class="feature">
       <h2>Unlimited Movies and Shows</h2>
-      <div class="gallery">
-        <img src="assets/movies/movie_01.webp" alt="Movie 1">
-        <img src="assets/movies/movie_02.webp" alt="Movie 2">
-        <img src="assets/movies/movie_03.webp" alt="Movie 3">
-        <img src="assets/movies/movie_04.webp" alt="Movie 4">
-        <img src="assets/movies/movie_05.webp" alt="Movie 5">
-        <img src="assets/movies/movie_06.webp" alt="Movie 6">
-        <img src="assets/movies/movie_07.webp" alt="Movie 7">
-        
+      <div class="glide gallery-glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img src="assets/movies/movie_01.webp" alt="Movie 1" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_02.webp" alt="Movie 2" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_03.webp" alt="Movie 3" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_04.webp" alt="Movie 4" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_05.webp" alt="Movie 5" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_06.webp" alt="Movie 6" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_07.webp" alt="Movie 7" loading="lazy" decoding="async"></li>
+          </ul>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
+          <button class="glide__bullet" data-glide-dir="=4"></button>
+          <button class="glide__bullet" data-glide-dir="=5"></button>
+          <button class="glide__bullet" data-glide-dir="=6"></button>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+        </div>
       </div>
       <p class="feature-desc">Enjoy the latest hits on your iPhone</p>
       <a href="#" class="btn">
@@ -53,11 +71,25 @@
 
     <section class="feature">
       <h2>Dive into Retro Emulators World</h2>
-      <div class="gallery">
-        <img src="assets/retro/retro_01.webp" alt="Emulator 1">
-        <img src="assets/retro/retro_02.webp" alt="Emulator 2">
-        <img src="assets/retro/retro_03.webp" alt="Emulator 3">
-        <img src="assets/retro/retro_04.webp" alt="Emulator 4">
+      <div class="glide gallery-glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img src="assets/retro/retro_01.webp" alt="Emulator 1" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_02.webp" alt="Emulator 2" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_03.webp" alt="Emulator 3" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_04.webp" alt="Emulator 4" loading="lazy" decoding="async"></li>
+          </ul>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+        </div>
       </div>
       <p class="feature-desc">Enjoy first ever Cart Mario game on NDS emulator</p>
       <a href="#" class="btn">
@@ -70,9 +102,21 @@
 
     <section class="feature">
       <h2>Enjoy unlocked premium apps</h2>
-      <div class="gallery">
-        <img src="assets/premium_apps/premium_apps_01.webp" alt="Premium 1">
-        <img src="assets/premium_apps/premium_apps_02.webp" alt="Premium 2">
+      <div class="glide gallery-glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_01.webp" alt="Premium 1" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_02.webp" alt="Premium 2" loading="lazy" decoding="async"></li>
+          </ul>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+        </div>
       </div>
       <p class="feature-desc">Make fantastic photos like a pro. 50+ professional AI presets.</p>
       <a href="#" class="btn">
@@ -85,12 +129,27 @@
 
     <section class="feature">
       <h2>Adult content on your iPhone</h2>
-      <div class="gallery">
-        <img src="assets/adult/adult_01.webp" alt="Adult 1">
-        <img src="assets/adult/adult_02.webp" alt="Adult 2">
-        <img src="assets/adult/adult_03.webp" alt="Adult 3">
-        <img src="assets/adult/adult_04.webp" alt="Adult 4">
-        <img src="assets/adult/adult_05.webp" alt="Adult 5">
+      <div class="glide gallery-glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img src="assets/adult/adult_01.webp" alt="Adult 1" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/adult/adult_02.webp" alt="Adult 2" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/adult/adult_03.webp" alt="Adult 3" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/adult/adult_04.webp" alt="Adult 4" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/adult/adult_05.webp" alt="Adult 5" loading="lazy" decoding="async"></li>
+          </ul>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
+          <button class="glide__bullet" data-glide-dir="=4"></button>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+        </div>
       </div>
       <p class="feature-desc">A private and secure way to watch videos from all major adult platforms. No ads, no tracking.</p>
       <a href="#" class="btn">
@@ -106,6 +165,7 @@
     <p>&copy; 2012-<span id="year"></span> BuildStore. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html> 
