@@ -372,16 +372,17 @@ body {
   z-index: 2;
   padding: 0;
   line-height: 1;
-  left: 0;
-  right: 0;
+  left: auto;
+  right: auto;
+  transform: translateY(-50%);
 }
 
 .gallery-glide .glide__arrow--left {
-  transform: translate(-150%, -50%);
+  left: var(--space-sm);
 }
 
 .gallery-glide .glide__arrow--right {
-  transform: translate(150%, -50%);
+  right: var(--space-sm);
 }
 
 .gallery-glide .glide__arrow:hover {
@@ -693,8 +694,23 @@ body {
   }
 }
 
+/* ───────── Mobile-tune стрелок (≤ 480 px) ───────── */
+@media (max-width: 480px) {
+  .gallery-glide .glide__arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+  .gallery-glide .glide__arrow--left {
+    left: var(--space-xs);
+  }
+  .gallery-glide .glide__arrow--right {
+    right: var(--space-xs);
+  }
+}
+
 /* ───────── Responsive font sizes for very small screens ───────── */
 @media (max-width: 380px) {
-  .hero h1   { font-size: 1.35rem; }
-  .hero .alt { font-size: 1.1em; }
+  .hero h1   { font-size: 1.6rem; }
+  .hero .alt { font-size: 1.25em; }
 } 
