@@ -722,6 +722,44 @@ body {
   }
 }
 
+/* ───────── Adult Content Age Gate ───────── */
+.adult-section {
+  position: relative;
+}
+
+.age-gate {
+  position: relative;
+}
+
+.gallery-glide.blurred {
+  filter: blur(8px);
+}
+
+.age-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  z-index: 10;
+}
+
+.age-content {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.age-content p {
+  margin-bottom: var(--space-lg);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-medium);
+}
+
 /* ───────── Responsive font sizes for very small screens ───────── */
 @media (max-width: 380px) {
   .hero h1   { font-size: 1.6rem; }
