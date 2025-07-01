@@ -50,6 +50,13 @@
   --content-max-width: 1200px;
 }
 
+/* ───────── sane-box-model ───────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-primary);
   margin: 0;
@@ -179,7 +186,8 @@ body {
   font-weight: var(--font-weight-bold);
   letter-spacing: -0.02em;
   line-height: 1.2;
-  max-width: 800px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 .hero .alt {
   background: var(--gradient-neon);
@@ -196,7 +204,9 @@ body {
   color: var(--text-secondary);
   font-weight: var(--font-weight-normal);
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .hero-dots {
   display: flex;
@@ -240,6 +250,7 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  overflow-x: hidden; /* предохранитель от будущих багов */
 }
 .feature:hover {
   transform: translateY(-4px);
@@ -298,8 +309,12 @@ body {
 /* Glide.js Gallery Styles */
 .gallery-glide {
   position: relative;
-  margin-bottom: var(--space-lg);
-  padding: 0 50px; /* Место для стрелок */
+  padding: 0; /* стрелкам "карман" больше не нужен */
+  margin-left: auto; /* галерея по центру .feature */
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
 .gallery-glide .glide__track {
@@ -341,9 +356,8 @@ body {
 .gallery-glide .glide__arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -358,14 +372,16 @@ body {
   z-index: 2;
   padding: 0;
   line-height: 1;
+  left: 0;
+  right: 0;
 }
 
 .gallery-glide .glide__arrow--left {
-  left: 5px;
+  transform: translate(-150%, -50%);
 }
 
 .gallery-glide .glide__arrow--right {
-  right: 5px;
+  transform: translate(150%, -50%);
 }
 
 .gallery-glide .glide__arrow:hover {
@@ -384,8 +400,9 @@ body {
 .gallery-glide .glide__bullets {
   display: flex;
   justify-content: center;
-  margin-top: var(--space-md);
   gap: 8px;
+  position:static;
+  transform:none;
 }
 
 .gallery-glide .glide__bullet {
@@ -674,4 +691,10 @@ body {
     margin-right: auto;
     max-width: 1200px;
   }
+}
+
+/* ───────── Responsive font sizes for very small screens ───────── */
+@media (max-width: 380px) {
+  .hero h1   { font-size: 1.35rem; }
+  .hero .alt { font-size: 1.1em; }
 } 
