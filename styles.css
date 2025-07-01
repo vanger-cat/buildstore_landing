@@ -169,7 +169,7 @@ body {
   text-align: left;
   position: relative;
   border-bottom: 1px solid rgba(139, 92, 246, 0.2);
-  min-height: 60vh;
+  min-height: 45vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -647,15 +647,16 @@ body {
   }
   
   .hero {
-    min-height: 50vh;
+    min-height: auto;
   }
   
   .hero-container {
-    padding: var(--space-2xl) var(--container-padding);
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-lg);
   }
   
   .feature {
-    margin-top: var(--space-2xl);
+    margin-top: var(--space-lg);
     padding: var(--space-xl) var(--container-padding);
   }
   
@@ -676,6 +677,13 @@ body {
     --section-spacing: 3rem;
   }
   
+  .hero {
+    min-height: 50vh;
+  }
+  
+  .hero-container {
+    padding-bottom: var(--space-xl);
+  }
 }
 
 @media (min-width: 769px) {
