@@ -772,4 +772,76 @@ body {
 @media (max-width: 380px) {
   .hero h1   { font-size: 1.6rem; }
   .hero .alt { font-size: 1.25em; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════
+   REDESIGN: Clean Rectangular Design Override
+   ═══════════════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* 0. Global tweaks */
+:root {
+  /* плотнее вертикальный ритм */
+  --section-spacing: clamp(2rem, 5vw, 4rem);
+  /* постерам даём больше высоты */
+  --slide-h: 320px;                /* base */
+}
+
+@media (min-width: 480px) { 
+  :root { --slide-h: 480px; } 
+}
+
+@media (min-width: 768px) { 
+  :root { --slide-h: 640px; } 
+}
+
+/* 1. Карточка-секция */
+.feature {
+  border-radius: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,.25);   /* мягче */
+  padding: var(--space-xl) var(--container-padding);
+}
+.feature::before,
+.feature::after { 
+  display: none !important; 
+}
+
+/* 2. Заголовок без иконок */
+.feature h2 { 
+  font-size: clamp(1.35rem, 3.5vw, 1.75rem); 
+}
+.feature h2::before { 
+  content: none; 
+}
+
+/* 3. Галерея: прямоугольная карточка, bullets поверх */
+.gallery-glide .glide__slide { 
+  height: var(--slide-h); 
+}
+.gallery-glide .glide__slide img {
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,.2);
+}
+
+/* bullets поверх изображения в том же overlay контейнере */
+.gallery-glide .glide__arrows .glide__bullets {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 6px;
+  z-index: 4;
+}
+
+/* 4. Кнопки: фирменный violet и компактнее */
+.btn {
+  background: #8b5cf6;
+  color: #fff;
+  box-shadow: none;
+  font-size: .875rem;                  /* −~12 % */
+  padding: calc(var(--space-sm) * .8) calc(var(--space-lg) * .8);
+  min-width: 88px;                    /* ~1.8× меньше */
+}
+.btn:hover { 
+  filter: brightness(1.05); 
+  transform: none; 
 } 
