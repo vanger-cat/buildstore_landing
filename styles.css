@@ -352,7 +352,19 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
-/* Кастомизация стрелок */
+/* слой для стрелок: поверх картинки, вне влияния точек */
+.gallery-glide .glide__arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* ровно высота слайда */
+  pointer-events: none; /* клики сквозь контейнер, но… */
+  display: block; /* не flex, чтобы не изменить layout стрелок */
+  z-index: 3; /* выше картинки и точек */
+}
+
+/* сами стрелки — снова с нормальным центрированием */
 .gallery-glide .glide__arrow {
   position: absolute;
   top: 50%;
@@ -374,7 +386,8 @@ body {
   line-height: 1;
   left: auto;
   right: auto;
-  transform: translateY(-50%);
+  transform: translateY(-50%); /* вертикальный центр именно картинки */
+  pointer-events: auto; /* сама кнопка кликается */
 }
 
 .gallery-glide .glide__arrow--left {
