@@ -2,8 +2,8 @@
   --bg-primary: #18181C;
   --bg-secondary: #18181C;
   --bg-card: #18181C;
-  --accent: #5120BC;
-  --shadow-accent: 0 4px 24px 0 rgba(81,32,188,0.18);
+  --accent: #5B9BFF ;
+  --shadow-accent: 0 4px 24px 0 rgba(91,155,255,0.18);
   --section-divider: 1px solid rgba(255,255,255,0.08);
   --text-primary: #fff;
   --text-secondary: #b3b3b3;
@@ -168,8 +168,8 @@ body {
 }
 .hero .alt {
   background: none !important;
-  color: #5120BC !important;
-  -webkit-text-fill-color: #5120BC !important;
+  color: var(--accent) !important;
+  -webkit-text-fill-color: var(--accent) !important;
   font-size: 1.2em;
   font-weight: var(--font-weight-black);
   text-shadow: none;
@@ -828,7 +828,7 @@ body {
 } 
 
 .sign-in, .btn, .btn-ghost {
-  background: #5120BC !important;
+  background: var(--accent) !important;
   color: #fff !important;
   border: none;
   border-radius: 2em;
@@ -840,7 +840,26 @@ body {
   text-transform: none;
 }
 .sign-in:hover, .sign-in:focus, .btn:hover, .btn:focus, .btn-ghost:hover, .btn-ghost:focus {
-  background: #5120BC !important;
+  background: var(--accent) !important;
   color: #fff !important;
-  box-shadow: 0 0 16px 0 rgba(81,32,188,0.4);
+  box-shadow: 0 0 16px 0 rgba(91,155,255,0.4);
+} 
+
+.gallery-glide .glide__arrow, .gallery-glide .glide__bullet {
+  color: var(--accent) !important;
+  background: transparent;
+  border: none;
+}
+.gallery-glide .glide__bullet--active {
+  background: var(--accent) !important;
+}
+
+/* Обновляю тень под карточками на основе нового акцентного цвета */
+:root {
+  --shadow-accent: 0 4px 24px 0 rgba(91,155,255,0.18);
+}
+.gallery-glide .glide__slide img {
+  box-shadow: var(--shadow-accent);
+  border-radius: 16px;
+  background: none;
 } 
