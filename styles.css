@@ -1,32 +1,13 @@
 :root {
-  /* Dark theme colors */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #1a1a1a;
-  --bg-card: #2a2a2a;
-  
-  /* Neon accents */
-  --neon-blue: #00d4ff;
-  --neon-purple: #8b5cf6;
-  --neon-pink: #ff00ff;
-  --neon-green: #00ff88;
-  --neon-yellow: #ffff00;
-  --neon-orange: #ff6b35;
-  
-  /* Text colors */
-  --text-primary: #ffffff;
+  --bg-primary: #18181C;
+  --bg-secondary: #18181C;
+  --bg-card: #18181C;
+  --accent: #5120BC;
+  --shadow-accent: 0 4px 24px 0 rgba(81,32,188,0.18);
+  --section-divider: 1px solid rgba(255,255,255,0.08);
+  --text-primary: #fff;
   --text-secondary: #b3b3b3;
-  --text-muted: #666666;
-  
-  /* Gradients */
-  --gradient-neon: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 50%, var(--neon-pink) 100%);
-  --gradient-dark: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-  
-  /* Shadows and glows */
-  --glow-blue: 0 0 20px rgba(0, 212, 255, 0.3);
-  --glow-purple: 0 0 20px rgba(139, 92, 246, 0.3);
-  --glow-pink: 0 0 20px rgba(255, 0, 255, 0.3);
-  
-  /* Typography */
+  --text-muted: #666;
   --font-primary: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
@@ -34,17 +15,13 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-black: 900;
-  
-  /* Modern spacing system */
-  --space-xs: 0.5rem;   /* 8px */
-  --space-sm: 1rem;     /* 16px */
-  --space-md: 1.5rem;   /* 24px */
-  --space-lg: 2rem;     /* 32px */
-  --space-xl: 3rem;     /* 48px */
-  --space-2xl: 4rem;    /* 64px */
-  --space-3xl: 6rem;    /* 96px */
-  
-  /* Container spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
   --container-padding: clamp(1rem, 4vw, 2rem);
   --section-spacing: clamp(3rem, 8vw, 6rem);
   --content-max-width: 1200px;
@@ -73,9 +50,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(26, 26, 26, 0.95) 100%);
+  background: transparent;
   min-height: 48px;
-  border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+  border-bottom: var(--section-divider);
   position: relative;
   overflow: hidden;
 }
@@ -115,7 +92,7 @@ body {
   filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.5));
 }
 .sign-in {
-  color: var(--text-primary);
+  color: var(--accent);
   text-decoration: none;
   font-weight: var(--font-weight-medium);
   font-size: 1rem;
@@ -190,10 +167,9 @@ body {
   overflow-wrap: anywhere;
 }
 .hero .alt {
-  background: var(--gradient-neon);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none !important;
+  color: #5120BC !important;
+  -webkit-text-fill-color: #5120BC !important;
   font-size: 1.2em;
   font-weight: var(--font-weight-black);
   text-shadow: none;
@@ -235,22 +211,25 @@ body {
 }
 
 .feature {
-  background: var(--bg-card);
+  background: none !important;
   color: var(--text-primary);
   margin-top: var(--section-spacing);
   padding: var(--space-2xl) var(--container-padding) var(--space-xl) var(--container-padding);
-  border-radius: 24px;
+  border-radius: 0;
   text-align: center;
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  border: none;
   position: relative;
   max-width: var(--content-max-width);
   margin-left: auto;
   margin-right: auto;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  overflow-x: hidden; /* предохранитель от будущих багов */
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+  overflow: visible;
+}
+.feature:not(:last-child) {
+  border-bottom: var(--section-divider);
+  margin-bottom: 64px;
+  padding-bottom: 64px;
 }
 .feature:hover {
   transform: translateY(-4px);
@@ -341,8 +320,8 @@ body {
   max-width: 100%; /* Не выходить за границы слайда */
   object-fit: contain;
   border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: none;
+  box-shadow: var(--shadow-accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: block;
 }
@@ -373,7 +352,7 @@ body {
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  color: var(--neon-blue);
+  color: var(--accent);
   font-size: 24px;
   display: flex;
   align-items: center;
@@ -431,7 +410,7 @@ body {
 }
 
 .gallery-glide .glide__bullet--active {
-  background: var(--neon-blue);
+  background: var(--accent);
   box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
   transform: scale(1.2);
 }
@@ -548,16 +527,18 @@ body {
 
 /* Ghost button */
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-weight: 600;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: none;
 }
-.btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px);
+.btn-ghost:hover, .btn-ghost:focus {
+  box-shadow: 0 0 16px 0 rgba(81,32,188,0.4);
+  background: var(--accent);
 }
 
 /* Danger button */
@@ -834,14 +815,32 @@ body {
 
 /* 4. Кнопки: фирменный violet и компактнее */
 .btn {
-  background: #8b5cf6;
+  background: var(--accent);
   color: #fff;
   box-shadow: none;
   font-size: .875rem;                  /* −~12 % */
   padding: calc(var(--space-sm) * .8) calc(var(--space-lg) * .8);
   min-width: 88px;                    /* ~1.8× меньше */
 }
-.btn:hover { 
+.btn:hover, .btn:focus { 
   filter: brightness(1.05); 
   transform: none; 
+} 
+
+.sign-in, .btn, .btn-ghost {
+  background: #5120BC !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 2em;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 20px;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: none;
+  text-transform: none;
+}
+.sign-in:hover, .sign-in:focus, .btn:hover, .btn:focus, .btn-ghost:hover, .btn-ghost:focus {
+  background: #5120BC !important;
+  color: #fff !important;
+  box-shadow: 0 0 16px 0 rgba(81,32,188,0.4);
 } 
