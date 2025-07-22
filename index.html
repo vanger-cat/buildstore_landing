@@ -21,7 +21,7 @@
   <header class="header">
     <div class="header-container">
       <div class="logo"><img src="assets/logo.svg" alt="BuildStore Logo"></div>
-      <a href="https://builds.io/auth/sign-in?utm_source=home_page&utm_medium=referral&utm_campaign=hp062025&utm_content=header_signin" class="sign-in">
+      <a href="https://builds.io/auth/sign-in" class="sign-in" onclick="gtag('event', 'user_tap_signin_header', {'event_category': 'button_click', 'event_label': 'signin', 'section': 'header'});">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
         </svg>
@@ -53,21 +53,21 @@
           </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<" onclick="gtag('event', 'user_tap_arrow_left_movies', {'event_category': 'slider_control', 'event_label': 'arrow_left', 'section': 'movies'});">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">" onclick="gtag('event', 'user_tap_arrow_right_movies', {'event_category': 'slider_control', 'event_label': 'arrow_right', 'section': 'movies'});">›</button>
           <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-            <button class="glide__bullet" data-glide-dir="=2"></button>
-            <button class="glide__bullet" data-glide-dir="=3"></button>
-            <button class="glide__bullet" data-glide-dir="=4"></button>
-            <button class="glide__bullet" data-glide-dir="=5"></button>
-            <button class="glide__bullet" data-glide-dir="=6"></button>
+            <button class="glide__bullet" data-glide-dir="=0" onclick="gtag('event', 'user_tap_bullet_movies_1', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'movies', 'position': '1'});"></button>
+            <button class="glide__bullet" data-glide-dir="=1" onclick="gtag('event', 'user_tap_bullet_movies_2', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'movies', 'position': '2'});"></button>
+            <button class="glide__bullet" data-glide-dir="=2" onclick="gtag('event', 'user_tap_bullet_movies_3', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'movies', 'position': '3'});"></button>
+            <button class="glide__bullet" data-glide-dir="=3" onclick="gtag('event', 'user_tap_bullet_movies_4', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'movies', 'position': '4'});"></button>
+            <button class="glide__bullet" data-glide-dir="=4" onclick="gtag('event', 'user_tap_bullet_movies_5', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'movies', 'position': '5'});"></button>
+            <button class="glide__bullet" data-glide-dir="=5" onclick="gtag('event', 'user_tap_bullet_movies_6', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'movies', 'position': '6'});"></button>
+            <button class="glide__bullet" data-glide-dir="=6" onclick="gtag('event', 'user_tap_bullet_movies_7', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'movies', 'position': '7'});"></button>
           </div>
         </div>
       </div>
       <p class="feature-desc">Stream the latest movies and TV shows directly on your iPhone or iPad</p>
-      <a href="https://builds.io/auth/sign-up?utm_source=home_page&utm_medium=referral&utm_campaign=hp062025&utm_content=movies_signup" class="btn">
+      <a href="https://builds.io/auth/sign-up" class="btn" onclick="gtag('event', 'user_tap_signup_movies', {'event_category': 'button_click', 'event_label': 'signup', 'section': 'movies'});">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M8 5v14l11-7z"/>
         </svg>
@@ -94,25 +94,25 @@
           </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<" onclick="gtag('event', 'user_tap_arrow_left_gaming', {'event_category': 'slider_control', 'event_label': 'arrow_left', 'section': 'gaming'});">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">" onclick="gtag('event', 'user_tap_arrow_right_gaming', {'event_category': 'slider_control', 'event_label': 'arrow_right', 'section': 'gaming'});">›</button>
           <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-            <button class="glide__bullet" data-glide-dir="=2"></button>
-            <button class="glide__bullet" data-glide-dir="=3"></button>
-            <button class="glide__bullet" data-glide-dir="=4"></button>
-            <button class="glide__bullet" data-glide-dir="=5"></button>
-            <button class="glide__bullet" data-glide-dir="=6"></button>
-            <button class="glide__bullet" data-glide-dir="=7"></button>
-            <button class="glide__bullet" data-glide-dir="=8"></button>
-            <button class="glide__bullet" data-glide-dir="=9"></button>
-            <button class="glide__bullet" data-glide-dir="=10"></button>
+            <button class="glide__bullet" data-glide-dir="=0" onclick="gtag('event', 'user_tap_bullet_gaming_1', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '1'});"></button>
+            <button class="glide__bullet" data-glide-dir="=1" onclick="gtag('event', 'user_tap_bullet_gaming_2', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '2'});"></button>
+            <button class="glide__bullet" data-glide-dir="=2" onclick="gtag('event', 'user_tap_bullet_gaming_3', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '3'});"></button>
+            <button class="glide__bullet" data-glide-dir="=3" onclick="gtag('event', 'user_tap_bullet_gaming_4', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '4'});"></button>
+            <button class="glide__bullet" data-glide-dir="=4" onclick="gtag('event', 'user_tap_bullet_gaming_5', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '5'});"></button>
+            <button class="glide__bullet" data-glide-dir="=5" onclick="gtag('event', 'user_tap_bullet_gaming_6', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '6'});"></button>
+            <button class="glide__bullet" data-glide-dir="=6" onclick="gtag('event', 'user_tap_bullet_gaming_7', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '7'});"></button>
+            <button class="glide__bullet" data-glide-dir="=7" onclick="gtag('event', 'user_tap_bullet_gaming_8', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '8'});"></button>
+            <button class="glide__bullet" data-glide-dir="=8" onclick="gtag('event', 'user_tap_bullet_gaming_9', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '9'});"></button>
+            <button class="glide__bullet" data-glide-dir="=9" onclick="gtag('event', 'user_tap_bullet_gaming_10', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '10'});"></button>
+            <button class="glide__bullet" data-glide-dir="=10" onclick="gtag('event', 'user_tap_bullet_gaming_11', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'gaming', 'position': '11'});"></button>
           </div>
         </div>
       </div>
       <p class="feature-desc">Play classic console games with advanced emulators</p>
-      <a href="https://builds.io/auth/sign-up?utm_source=home_page&utm_medium=referral&utm_campaign=hp062025&utm_content=gaming_signup" class="btn">
+      <a href="https://builds.io/auth/sign-up" class="btn" onclick="gtag('event', 'user_tap_signup_gaming', {'event_category': 'button_click', 'event_label': 'signup', 'section': 'gaming'});">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M7,6V18L18,12M9,8.5V15.5L15.5,12L9,8.5Z"/>
         </svg>
@@ -138,24 +138,24 @@
           </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<" onclick="gtag('event', 'user_tap_arrow_left_premium', {'event_category': 'slider_control', 'event_label': 'arrow_left', 'section': 'premium'});">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">" onclick="gtag('event', 'user_tap_arrow_right_premium', {'event_category': 'slider_control', 'event_label': 'arrow_right', 'section': 'premium'});">›</button>
           <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-            <button class="glide__bullet" data-glide-dir="=2"></button>
-            <button class="glide__bullet" data-glide-dir="=3"></button>
-            <button class="glide__bullet" data-glide-dir="=4"></button>
-            <button class="glide__bullet" data-glide-dir="=5"></button>
-            <button class="glide__bullet" data-glide-dir="=6"></button>
-            <button class="glide__bullet" data-glide-dir="=7"></button>
-            <button class="glide__bullet" data-glide-dir="=8"></button>
-            <button class="glide__bullet" data-glide-dir="=9"></button>
+            <button class="glide__bullet" data-glide-dir="=0" onclick="gtag('event', 'user_tap_bullet_premium_1', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'premium', 'position': '1'});"></button>
+            <button class="glide__bullet" data-glide-dir="=1" onclick="gtag('event', 'user_tap_bullet_premium_2', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'premium', 'position': '2'});"></button>
+            <button class="glide__bullet" data-glide-dir="=2" onclick="gtag('event', 'user_tap_bullet_premium_3', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'premium', 'position': '3'});"></button>
+            <button class="glide__bullet" data-glide-dir="=3" onclick="gtag('event', 'user_tap_bullet_premium_4', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'premium', 'position': '4'});"></button>
+            <button class="glide__bullet" data-glide-dir="=4" onclick="gtag('event', 'user_tap_bullet_premium_5', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'premium', 'position': '5'});"></button>
+            <button class="glide__bullet" data-glide-dir="=5" onclick="gtag('event', 'user_tap_bullet_premium_6', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'premium', 'position': '6'});"></button>
+            <button class="glide__bullet" data-glide-dir="=6" onclick="gtag('event', 'user_tap_bullet_premium_7', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'premium', 'position': '7'});"></button>
+            <button class="glide__bullet" data-glide-dir="=7" onclick="gtag('event', 'user_tap_bullet_premium_8', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'premium', 'position': '8'});"></button>
+            <button class="glide__bullet" data-glide-dir="=8" onclick="gtag('event', 'user_tap_bullet_premium_9', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'premium', 'position': '9'});"></button>
+            <button class="glide__bullet" data-glide-dir="=9" onclick="gtag('event', 'user_tap_bullet_premium_10', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'premium', 'position': '10'});"></button>
           </div>
         </div>
       </div>
       <p class="feature-desc">Unlock pro features in your favorite apps</p>
-      <a href="https://builds.io/auth/sign-up?utm_source=home_page&utm_medium=referral&utm_campaign=hp062025&utm_content=premium_signup" class="btn">
+      <a href="https://builds.io/auth/sign-up" class="btn" onclick="gtag('event', 'user_tap_signup_premium', {'event_category': 'button_click', 'event_label': 'signup', 'section': 'premium'});">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10A2,2 0 0,1 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/>
         </svg>
@@ -180,28 +180,28 @@
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<" onclick="gtag('event', 'user_tap_arrow_left_adult', {'event_category': 'slider_control', 'event_label': 'arrow_left', 'section': 'adult'});">‹</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">" onclick="gtag('event', 'user_tap_arrow_right_adult', {'event_category': 'slider_control', 'event_label': 'arrow_right', 'section': 'adult'});">›</button>
             <div class="glide__bullets" data-glide-el="controls[nav]">
-              <button class="glide__bullet" data-glide-dir="=0"></button>
-              <button class="glide__bullet" data-glide-dir="=1"></button>
-              <button class="glide__bullet" data-glide-dir="=2"></button>
-              <button class="glide__bullet" data-glide-dir="=3"></button>
-              <button class="glide__bullet" data-glide-dir="=4"></button>
-              <button class="glide__bullet" data-glide-dir="=5"></button>
-              <button class="glide__bullet" data-glide-dir="=6"></button>
-              <button class="glide__bullet" data-glide-dir="=7"></button>
+              <button class="glide__bullet" data-glide-dir="=0" onclick="gtag('event', 'user_tap_bullet_adult_1', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'adult', 'position': '1'});"></button>
+              <button class="glide__bullet" data-glide-dir="=1" onclick="gtag('event', 'user_tap_bullet_adult_2', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'adult', 'position': '2'});"></button>
+              <button class="glide__bullet" data-glide-dir="=2" onclick="gtag('event', 'user_tap_bullet_adult_3', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'adult', 'position': '3'});"></button>
+              <button class="glide__bullet" data-glide-dir="=3" onclick="gtag('event', 'user_tap_bullet_adult_4', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'adult', 'position': '4'});"></button>
+              <button class="glide__bullet" data-glide-dir="=4" onclick="gtag('event', 'user_tap_bullet_adult_5', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'adult', 'position': '5'});"></button>
+              <button class="glide__bullet" data-glide-dir="=5" onclick="gtag('event', 'user_tap_bullet_adult_6', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'adult', 'position': '6'});"></button>
+              <button class="glide__bullet" data-glide-dir="=6" onclick="gtag('event', 'user_tap_bullet_adult_7', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'adult', 'position': '7'});"></button>
+              <button class="glide__bullet" data-glide-dir="=7" onclick="gtag('event', 'user_tap_bullet_adult_8', {'event_category': 'slider_control', 'event_label': 'bullet', 'section': 'adult', 'position': '8'});"></button>
             </div>
           </div>
         </div>
         <div class="age-overlay" id="age-overlay">
           <div class="age-content">
             <p>This content is restricted to users 18+</p>
-            <button class="btn btn-ghost" onclick="showAdultContent()">I am 18 or older</button>
+            <button class="btn btn-ghost" onclick="showAdultContent(); gtag('event', 'user_tap_age_confirm_adult', {'event_category': 'age_verification', 'event_label': 'age_confirm', 'section': 'adult'});">I am 18 or older</button>
           </div>
         </div>
         <p class="feature-desc">Private and secure access to adult entertainment</p>
-        <a href="https://builds.io/auth/sign-up?utm_source=home_page&utm_medium=referral&utm_campaign=hp062025&utm_content=adult_signup" class="btn">
+        <a href="https://builds.io/auth/sign-up" class="btn" onclick="gtag('event', 'user_tap_signup_adult', {'event_category': 'button_click', 'event_label': 'signup', 'section': 'adult'});">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12,2L14.5,8.5L22,9.5L17,14.5L18.5,22L12,18.5L5.5,22L7,14.5L2,9.5L9.5,8.5L12,2Z"/>
           </svg>
