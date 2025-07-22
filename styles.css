@@ -1,32 +1,13 @@
 :root {
-  /* Dark theme colors */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #1a1a1a;
-  --bg-card: #2a2a2a;
-  
-  /* Neon accents */
-  --neon-blue: #00d4ff;
-  --neon-purple: #8b5cf6;
-  --neon-pink: #ff00ff;
-  --neon-green: #00ff88;
-  --neon-yellow: #ffff00;
-  --neon-orange: #ff6b35;
-  
-  /* Text colors */
-  --text-primary: #ffffff;
+  --bg-primary: #18181C;
+  --bg-secondary: #18181C;
+  --bg-card: #18181C;
+  --accent: #5B9BFF ;
+  --shadow-accent: 0 4px 24px 0 rgba(91,155,255,0.18);
+  --section-divider: 1px solid rgba(255,255,255,0.08);
+  --text-primary: #fff;
   --text-secondary: #b3b3b3;
-  --text-muted: #666666;
-  
-  /* Gradients */
-  --gradient-neon: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 50%, var(--neon-pink) 100%);
-  --gradient-dark: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-  
-  /* Shadows and glows */
-  --glow-blue: 0 0 20px rgba(0, 212, 255, 0.3);
-  --glow-purple: 0 0 20px rgba(139, 92, 246, 0.3);
-  --glow-pink: 0 0 20px rgba(255, 0, 255, 0.3);
-  
-  /* Typography */
+  --text-muted: #666;
   --font-primary: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
@@ -34,20 +15,23 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-black: 900;
-  
-  /* Modern spacing system */
-  --space-xs: 0.5rem;   /* 8px */
-  --space-sm: 1rem;     /* 16px */
-  --space-md: 1.5rem;   /* 24px */
-  --space-lg: 2rem;     /* 32px */
-  --space-xl: 3rem;     /* 48px */
-  --space-2xl: 4rem;    /* 64px */
-  --space-3xl: 6rem;    /* 96px */
-  
-  /* Container spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
   --container-padding: clamp(1rem, 4vw, 2rem);
   --section-spacing: clamp(3rem, 8vw, 6rem);
   --content-max-width: 1200px;
+}
+
+/* ───────── sane-box-model ───────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
@@ -66,9 +50,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(26, 26, 26, 0.95) 100%);
+  background: transparent;
   min-height: 48px;
-  border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+  border-bottom: var(--section-divider);
   position: relative;
   overflow: hidden;
 }
@@ -108,7 +92,7 @@ body {
   filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.5));
 }
 .sign-in {
-  color: var(--text-primary);
+  color: var(--accent);
   text-decoration: none;
   font-weight: var(--font-weight-medium);
   font-size: 1rem;
@@ -162,7 +146,7 @@ body {
   text-align: left;
   position: relative;
   border-bottom: 1px solid rgba(139, 92, 246, 0.2);
-  min-height: 60vh;
+  min-height: 45vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -179,13 +163,13 @@ body {
   font-weight: var(--font-weight-bold);
   letter-spacing: -0.02em;
   line-height: 1.2;
-  max-width: 800px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 .hero .alt {
-  background: var(--gradient-neon);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none !important;
+  color: var(--accent) !important;
+  -webkit-text-fill-color: var(--accent) !important;
   font-size: 1.2em;
   font-weight: var(--font-weight-black);
   text-shadow: none;
@@ -196,7 +180,9 @@ body {
   color: var(--text-secondary);
   font-weight: var(--font-weight-normal);
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .hero-dots {
   display: flex;
@@ -225,21 +211,25 @@ body {
 }
 
 .feature {
-  background: var(--bg-card);
+  background: none !important;
   color: var(--text-primary);
   margin-top: var(--section-spacing);
   padding: var(--space-2xl) var(--container-padding) var(--space-xl) var(--container-padding);
-  border-radius: 24px;
+  border-radius: 0;
   text-align: center;
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  border: none;
   position: relative;
   max-width: var(--content-max-width);
   margin-left: auto;
   margin-right: auto;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+  overflow: visible;
+}
+.feature:not(:last-child) {
+  border-bottom: var(--section-divider);
+  margin-bottom: 44px; /* было 64px, уменьшено на ~30% */
+  padding-bottom: 44px; /* было 64px, уменьшено на ~30% */
 }
 .feature:hover {
   transform: translateY(-4px);
@@ -275,11 +265,11 @@ body {
   filter: blur(8px);
 }
 .feature h2 {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-size: clamp(2rem, 5vw, 2.5rem); /* как у .hero h1 */
   margin-bottom: var(--space-lg);
   font-weight: var(--font-weight-bold);
   letter-spacing: -0.01em;
-  line-height: 1.3;
+  line-height: 1.2;
   position: relative;
   z-index: 1;
 }
@@ -295,48 +285,175 @@ body {
   border-radius: 1px;
   opacity: 0.6;
 }
-.gallery {
+/* Glide.js Gallery Styles */
+.gallery-glide {
+  position: relative;
+  padding: 0; /* стрелкам "карман" больше не нужен */
+  margin-left: auto; /* галерея по центру .feature */
+  margin-right: auto;
   display: flex;
+  flex-direction: column;
   gap: var(--space-md);
-  overflow-x: auto;
-  justify-content: center;
-  margin-bottom: var(--space-lg);
-  padding: var(--space-xs) 0;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(139, 92, 246, 0.6) transparent;
 }
 
-/* Custom scrollbar for WebKit browsers */
-.gallery::-webkit-scrollbar {
-  height: 8px;
+.gallery-glide .glide__track {
+  overflow: hidden;
 }
-.gallery::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
+
+.gallery-glide .glide__slides {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
-.gallery::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 100%);
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.gallery::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, var(--neon-purple) 0%, var(--neon-pink) 100%);
-  box-shadow: 0 0 8px rgba(139, 92, 246, 0.4);
-}
-.gallery img {
-  height: 220px;
-  width: auto;
-  object-fit: cover;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+.gallery-glide .glide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 240px; /* Фиксированная высота контейнера */
   flex-shrink: 0;
 }
-.gallery img:hover {
-  transform: translateY(-4px) scale(1.02);
+
+.gallery-glide .glide__slide img {
+  max-height: 100%; /* Ограничение по высоте контейнера */
+  width: auto; /* Автоматическая ширина для сохранения пропорций */
+  max-width: 100%; /* Не выходить за границы слайда */
+  object-fit: contain;
+  border-radius: 16px;
+  background: none;
+  box-shadow: var(--shadow-accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.gallery-glide .glide__slide--active img {
+  transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+/* слой для стрелок: поверх картинки, вне влияния точек */
+.gallery-glide .glide__arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* ровно высота слайда */
+  pointer-events: none; /* клики сквозь контейнер, но… */
+  display: block; /* не flex, чтобы не изменить layout стрелок */
+  z-index: 3; /* выше картинки и точек */
+}
+
+/* сами стрелки — снова с нормальным центрированием */
+.gallery-glide .glide__arrow {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  padding: 0;
+  line-height: 1;
+  left: auto;
+  right: auto;
+  transform: translateY(-50%); /* вертикальный центр именно картинки */
+  pointer-events: auto; /* сама кнопка кликается */
+}
+
+.gallery-glide .glide__arrow--left {
+  left: var(--space-sm);
+}
+
+.gallery-glide .glide__arrow--right {
+  right: var(--space-sm);
+}
+
+.gallery-glide .glide__arrow:hover {
+  background: rgba(0, 212, 255, 0.2);
+  box-shadow: var(--glow-blue);
+  transform: translateY(-50%) scale(1.1);
+  color: var(--neon-blue);
+}
+
+.gallery-glide .glide__arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Кастомизация точек */
+.gallery-glide .glide__bullets {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  position:static;
+  transform:none;
+}
+
+.gallery-glide .glide__bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.gallery-glide .glide__bullet--active {
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+  transform: scale(1.2);
+}
+
+/* Мобильные адаптации */
+@media (max-width: 768px) {
+  .gallery-glide {
+    padding: 0 30px;
+  }
+  
+  .gallery-glide .glide__slide {
+    height: 200px; /* Меньше высота на мобильных */
+  }
+  
+  .gallery-glide .glide__arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  
+  .gallery-glide .glide__arrow--left {
+    left: 0;
+  }
+  
+  .gallery-glide .glide__arrow--right {
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-glide {
+    padding: 0 25px;
+  }
+  
+  .gallery-glide .glide__slide {
+    height: 180px; /* Еще меньше для маленьких экранов */
+  }
+  
+  .gallery-glide .glide__arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
 }
 .feature-desc {
   margin: var(--space-lg) 0 var(--space-xl) 0;
@@ -410,16 +527,18 @@ body {
 
 /* Ghost button */
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-weight: 600;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: none;
 }
-.btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px);
+.btn-ghost:hover, .btn-ghost:focus {
+  box-shadow: 0 0 16px 0 rgba(81,32,188,0.4);
+  background: var(--accent);
 }
 
 /* Danger button */
@@ -509,15 +628,16 @@ body {
   }
   
   .hero {
-    min-height: 50vh;
+    min-height: auto;
   }
   
   .hero-container {
-    padding: var(--space-2xl) var(--container-padding);
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-lg);
   }
   
   .feature {
-    margin-top: var(--space-2xl);
+    margin-top: var(--space-lg);
     padding: var(--space-xl) var(--container-padding);
   }
   
@@ -538,8 +658,12 @@ body {
     --section-spacing: 3rem;
   }
   
-  .gallery img {
-    height: 230px;
+  .hero {
+    min-height: 50vh;
+  }
+  
+  .hero-container {
+    padding-bottom: var(--space-xl);
   }
 }
 
@@ -549,9 +673,6 @@ body {
     --section-spacing: 4rem;
   }
   
-  .gallery img {
-    height: 260px;
-  }
   
   .feature {
     padding: var(--space-3xl) var(--container-padding) var(--space-2xl) var(--container-padding);
@@ -573,4 +694,172 @@ body {
     margin-right: auto;
     max-width: 1200px;
   }
+}
+
+/* ───────── Mobile-tune стрелок (≤ 480 px) ───────── */
+@media (max-width: 480px) {
+  .gallery-glide .glide__arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+  .gallery-glide .glide__arrow--left {
+    left: var(--space-xs);
+  }
+  .gallery-glide .glide__arrow--right {
+    right: var(--space-xs);
+  }
+}
+
+/* ───────── Adult Content Age Gate ───────── */
+.adult-section {
+  position: relative;
+}
+
+.age-gate {
+  position: relative;
+}
+
+.gallery-glide.blurred {
+  filter: blur(8px);
+}
+
+.age-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  z-index: 10;
+}
+
+.age-content {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.age-content p {
+  margin-bottom: var(--space-lg);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-medium);
+}
+
+/* ───────── Responsive font sizes for very small screens ───────── */
+@media (max-width: 380px) {
+  .hero h1   { font-size: 1.6rem; }
+  .hero .alt { font-size: 1.25em; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════
+   REDESIGN: Clean Rectangular Design Override
+   ═══════════════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* 0. Global tweaks */
+:root {
+  /* плотнее вертикальный ритм */
+  --section-spacing: clamp(2rem, 5vw, 4rem);
+  /* постерам даём больше высоты */
+  --slide-h: 320px;                /* base */
+}
+
+@media (min-width: 480px) { 
+  :root { --slide-h: 480px; } 
+}
+
+@media (min-width: 768px) { 
+  :root { --slide-h: 640px; } 
+}
+
+/* 1. Карточка-секция */
+.feature {
+  border-radius: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,.25);   /* мягче */
+  padding: var(--space-xl) var(--container-padding);
+}
+.feature::before,
+.feature::after { 
+  display: none !important; 
+}
+
+/* 2. Заголовок без иконок */
+.feature h2 { 
+  font-size: clamp(1.35rem, 3.5vw, 1.75rem); 
+}
+.feature h2::before { 
+  content: none; 
+}
+
+/* 3. Галерея: прямоугольная карточка, bullets поверх */
+.gallery-glide .glide__slide { 
+  height: var(--slide-h); 
+}
+.gallery-glide .glide__slide img {
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,.2);
+}
+
+/* bullets поверх изображения в том же overlay контейнере */
+.gallery-glide .glide__arrows .glide__bullets {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 6px;
+  z-index: 4;
+}
+
+/* 4. Кнопки: фирменный violet и компактнее */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: none;
+  font-size: .875rem;                  /* −~12 % */
+  padding: calc(var(--space-sm) * .8) calc(var(--space-lg) * .8);
+  min-width: 88px;                    /* ~1.8× меньше */
+}
+.btn:hover, .btn:focus { 
+  filter: brightness(1.05); 
+  transform: none; 
+} 
+
+.sign-in, .btn, .btn-ghost {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 2em;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 20px;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: none;
+  text-transform: none;
+}
+.sign-in:hover, .sign-in:focus, .btn:hover, .btn:focus, .btn-ghost:hover, .btn-ghost:focus {
+  background: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: 0 0 16px 0 rgba(91,155,255,0.4);
+} 
+
+.gallery-glide .glide__arrow, .gallery-glide .glide__bullet {
+  color: var(--accent) !important;
+  background: transparent;
+  border: none;
+}
+.gallery-glide .glide__bullet--active {
+  background: var(--accent) !important;
+}
+
+/* Обновляю тень под карточками на основе нового акцентного цвета */
+:root {
+  --shadow-accent: 0 4px 24px 0 rgba(91,155,255,0.18);
+}
+.gallery-glide .glide__slide img {
+  box-shadow: var(--shadow-accent);
+  border-radius: 16px;
+  background: none;
 } 

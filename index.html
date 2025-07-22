@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BuildStore</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="header">
     <div class="header-container">
       <div class="logo"><img src="assets/logo.svg" alt="BuildStore Logo"></div>
-      <a href="#" class="sign-in">
+      <a href="https://builds.io/auth/sign-in?utm_source=home_page&utm_medium=referral&utm_campaign=hp062025&utm_content=header_signin" class="sign-in">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
         </svg>
@@ -22,83 +24,181 @@
   <main>
     <section class="hero">
       <div class="hero-container">
-        <h1>Safe and Trustworthy<br><span class="alt">Alternative App Store for iOS</span></h1>
+        <h1>Safe and Trustworthy<br><span class="alt">Alternative<wbr> App Store for iOS</span></h1>
         <p class="desc">Over 800 apps available — sideload your favorite apps like: Emulators, Media, Social media, and more!</p>
-        <div class="hero-dots">
-          <span></span><span></span><span></span>
-        </div>
       </div>
     </section>
 
     <section class="feature">
-      <h2>Unlimited Movies and Shows</h2>
-      <div class="gallery">
-        <img src="assets/movies/movie_01.webp" alt="Movie 1">
-        <img src="assets/movies/movie_02.webp" alt="Movie 2">
-        <img src="assets/movies/movie_03.webp" alt="Movie 3">
-        <img src="assets/movies/movie_04.webp" alt="Movie 4">
-        <img src="assets/movies/movie_05.webp" alt="Movie 5">
-        <img src="assets/movies/movie_06.webp" alt="Movie 6">
-        <img src="assets/movies/movie_07.webp" alt="Movie 7">
-        
+      <h2>Movies & TV Shows</h2>
+      <div class="glide gallery-glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img src="assets/movies/movie_01.webp" alt="Movie 1" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_02.webp" alt="Movie 2" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_03.webp" alt="Movie 3" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_04.webp" alt="Movie 4" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_05.webp" alt="Movie 5" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_06.webp" alt="Movie 6" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/movies/movie_07.webp" alt="Movie 7" loading="lazy" decoding="async"></li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+            <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
+            <button class="glide__bullet" data-glide-dir="=6"></button>
+          </div>
+        </div>
       </div>
-      <p class="feature-desc">Enjoy the latest hits on your iPhone</p>
-      <a href="#" class="btn">
+      <p class="feature-desc">Stream the latest movies and TV shows directly on your iPhone or iPad</p>
+      <a href="https://builds.io/auth/sign-up?utm_source=home_page&utm_medium=referral&utm_campaign=hp062025&utm_content=movies_signup" class="btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M8 5v14l11-7z"/>
         </svg>
-        WATCH NOW
+        Sign up
       </a>
     </section>
 
     <section class="feature">
-      <h2>Dive into Retro Emulators World</h2>
-      <div class="gallery">
-        <img src="assets/retro/retro_01.webp" alt="Emulator 1">
-        <img src="assets/retro/retro_02.webp" alt="Emulator 2">
-        <img src="assets/retro/retro_03.webp" alt="Emulator 3">
-        <img src="assets/retro/retro_04.webp" alt="Emulator 4">
+      <h2>Retro Gaming</h2>
+      <div class="glide gallery-glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img src="assets/retro/retro_01.webp" alt="Emulator 1" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_02.webp" alt="Emulator 2" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_03.webp" alt="Emulator 3" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_04.webp" alt="Emulator 4" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_05.webp" alt="Emulator 5" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_06.webp" alt="Emulator 6" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_07.webp" alt="Emulator 7" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_08.webp" alt="Emulator 8" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_09.webp" alt="Emulator 9" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_10.webp" alt="Emulator 10" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/retro/retro_11.webp" alt="Emulator 11" loading="lazy" decoding="async"></li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+            <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
+            <button class="glide__bullet" data-glide-dir="=6"></button>
+            <button class="glide__bullet" data-glide-dir="=7"></button>
+            <button class="glide__bullet" data-glide-dir="=8"></button>
+            <button class="glide__bullet" data-glide-dir="=9"></button>
+            <button class="glide__bullet" data-glide-dir="=10"></button>
+          </div>
+        </div>
       </div>
-      <p class="feature-desc">Enjoy first ever Cart Mario game on NDS emulator</p>
-      <a href="#" class="btn">
+      <p class="feature-desc">Play classic console games with advanced emulators</p>
+      <a href="https://builds.io/auth/sign-up?utm_source=home_page&utm_medium=referral&utm_campaign=hp062025&utm_content=gaming_signup" class="btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M7,6V18L18,12M9,8.5V15.5L15.5,12L9,8.5Z"/>
         </svg>
-        PLAY NOW
+        Sign up
       </a>
     </section>
 
     <section class="feature">
-      <h2>Enjoy unlocked premium apps</h2>
-      <div class="gallery">
-        <img src="assets/premium_apps/premium_apps_01.webp" alt="Premium 1">
-        <img src="assets/premium_apps/premium_apps_02.webp" alt="Premium 2">
+      <h2>Premium Apps</h2>
+      <div class="glide gallery-glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_01.webp" alt="Premium 1" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_02.webp" alt="Premium 2" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_03.webp" alt="Premium 3" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_04.webp" alt="Premium 4" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_05.webp" alt="Premium 5" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_06.webp" alt="Premium 6" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_07.webp" alt="Premium 7" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_08.webp" alt="Premium 8" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_09.webp" alt="Premium 9" loading="lazy" decoding="async"></li>
+            <li class="glide__slide"><img src="assets/premium_apps/premium_apps_10.webp" alt="Premium 10" loading="lazy" decoding="async"></li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+            <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
+            <button class="glide__bullet" data-glide-dir="=6"></button>
+            <button class="glide__bullet" data-glide-dir="=7"></button>
+            <button class="glide__bullet" data-glide-dir="=8"></button>
+            <button class="glide__bullet" data-glide-dir="=9"></button>
+          </div>
+        </div>
       </div>
-      <p class="feature-desc">Make fantastic photos like a pro. 50+ professional AI presets.</p>
-      <a href="#" class="btn">
+      <p class="feature-desc">Unlock pro features in your favorite apps</p>
+      <a href="https://builds.io/auth/sign-up?utm_source=home_page&utm_medium=referral&utm_campaign=hp062025&utm_content=premium_signup" class="btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10A2,2 0 0,1 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/>
         </svg>
-        UNLOCK NOW
+        Sign up
       </a>
     </section>
 
-    <section class="feature">
-      <h2>Adult content on your iPhone</h2>
-      <div class="gallery">
-        <img src="assets/adult/adult_01.webp" alt="Adult 1">
-        <img src="assets/adult/adult_02.webp" alt="Adult 2">
-        <img src="assets/adult/adult_03.webp" alt="Adult 3">
-        <img src="assets/adult/adult_04.webp" alt="Adult 4">
-        <img src="assets/adult/adult_05.webp" alt="Adult 5">
+    <section class="feature adult-section">
+      <h2>Adult Content 18+</h2>
+      <div class="age-gate">
+        <div class="glide gallery-glide blurred" id="adult-gallery">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide"><img src="assets/adult/adult_01.webp" alt="Adult 1" loading="lazy" decoding="async"></li>
+              <li class="glide__slide"><img src="assets/adult/adult_02.webp" alt="Adult 2" loading="lazy" decoding="async"></li>
+              <li class="glide__slide"><img src="assets/adult/adult_03.webp" alt="Adult 3" loading="lazy" decoding="async"></li>
+              <li class="glide__slide"><img src="assets/adult/adult_04.webp" alt="Adult 4" loading="lazy" decoding="async"></li>
+              <li class="glide__slide"><img src="assets/adult/adult_05.webp" alt="Adult 5" loading="lazy" decoding="async"></li>
+              <li class="glide__slide"><img src="assets/adult/adult_06.webp" alt="Adult 6" loading="lazy" decoding="async"></li>
+              <li class="glide__slide"><img src="assets/adult/adult_07.webp" alt="Adult 7" loading="lazy" decoding="async"></li>
+              <li class="glide__slide"><img src="assets/adult/adult_08.webp" alt="Adult 8" loading="lazy" decoding="async"></li>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+              <button class="glide__bullet" data-glide-dir="=0"></button>
+              <button class="glide__bullet" data-glide-dir="=1"></button>
+              <button class="glide__bullet" data-glide-dir="=2"></button>
+              <button class="glide__bullet" data-glide-dir="=3"></button>
+              <button class="glide__bullet" data-glide-dir="=4"></button>
+              <button class="glide__bullet" data-glide-dir="=5"></button>
+              <button class="glide__bullet" data-glide-dir="=6"></button>
+              <button class="glide__bullet" data-glide-dir="=7"></button>
+            </div>
+          </div>
+        </div>
+        <div class="age-overlay" id="age-overlay">
+          <div class="age-content">
+            <p>This content is restricted to users 18+</p>
+            <button class="btn btn-ghost" onclick="showAdultContent()">I am 18 or older</button>
+          </div>
+        </div>
+        <p class="feature-desc">Private and secure access to adult entertainment</p>
+        <a href="https://builds.io/auth/sign-up?utm_source=home_page&utm_medium=referral&utm_campaign=hp062025&utm_content=adult_signup" class="btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,2L14.5,8.5L22,9.5L17,14.5L18.5,22L12,18.5L5.5,22L7,14.5L2,9.5L9.5,8.5L12,2Z"/>
+          </svg>
+          Sign up
+        </a>
       </div>
-      <p class="feature-desc">A private and secure way to watch videos from all major adult platforms. No ads, no tracking.</p>
-      <a href="#" class="btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12,2L14.5,8.5L22,9.5L17,14.5L18.5,22L12,18.5L5.5,22L7,14.5L2,9.5L9.5,8.5L12,2Z"/>
-        </svg>
-        ENJOY NOW
-      </a>
     </section>
   </main>
 
@@ -106,6 +206,14 @@
     <p>&copy; 2012-<span id="year"></span> BuildStore. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    // Adult content age gate
+    function showAdultContent() {
+      document.getElementById('adult-gallery').classList.remove('blurred');
+      document.getElementById('age-overlay').style.display = 'none';
+    }
+  </script>
 </body>
 </html> 
